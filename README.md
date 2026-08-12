@@ -8,6 +8,11 @@ Módulo de frontend Zabbix que abre sesiones **SSH**, **Telnet** y **Web** (UI d
 
 Repositorio: [https://github.com/SimonLexRS/Zabbix-WebTerm](https://github.com/SimonLexRS/Zabbix-WebTerm)
 
+![GitHub stars](https://img.shields.io/github/stars/SimonLexRS/Zabbix-WebTerm?style=social) ![GitHub forks](https://img.shields.io/github/forks/SimonLexRS/Zabbix-WebTerm?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/SimonLexRS/Zabbix-WebTerm?style=social) ![Visitas](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSimonLexRS%2FZabbix-WebTerm&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=vistas&edge_flat=false)
+
+> 📊 Las estadísticas detalladas de **vistas** y **clones/descargas** están disponibles para el propietario en [GitHub Insights → Traffic](https://github.com/SimonLexRS/Zabbix-WebTerm/graphs/traffic) (GitHub no expone esos datos públicamente por privacidad). Los badges de arriba (stars, forks, watchers, visitas de README) sí son públicos y se actualizan en tiempo real.
+
+
 ## Requisitos
 
 | Componente | Mínimo | Notas |
