@@ -1,5 +1,7 @@
 # WebTerm — Terminal web para Zabbix
 
+
+
 Módulo de frontend Zabbix que abre sesiones **SSH**, **Telnet** y **Web** (UI del equipo) sin salir de la interfaz. Incluye una ventana flotante con pestañas (estilo SecureCRT) y una página dedicada.
 
 **Creado por [Simon Alex Rodriguez Saavedra](https://www.linkedin.com/in/srodriguezxs/)** — Elitech Solutions.
@@ -135,6 +137,9 @@ Debe existir:
 2. **Connect → SSH** (puerto 22), **Telnet** (23) o **Web** (80/443).
 3. Introduzca usuario y contraseña (SSH). No se almacenan en disco; el flotante no guarda credenciales en `localStorage`.
 4. Puede minimizar, maximizar y abrir varias pestañas.
+
+![WebTerm Screenshot](2026-08-12%2014_52_32-.png)
+
 
 Página dedicada: `zabbix.php?action=webterm.connect&hostid=<ID>`.
 
