@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2.0,
+    "id": "webterm",
+    "type": "module",
+    "name": "WebTerm - Terminal Web",
+    "namespace": "WebTerm",
+    "version": "1.0",
+    "author": "Elitech Solutions",
+    "url": "https://www.linkedin.com/in/srodriguezxs/",
+    "description": "Terminal web SSH/Telnet integrada en Zabbix. Permite conectar a equipos directamente desde la interfaz.",
+    "actions": {
+        "webterm.connect": {
+            "class": "Connect",
+            "layout": "layout.htmlpage",
+            "view": "connect.view"
+        },
+        "webterm.hostinfo": {
+            "class": "HostInfo"
+        }
+    },
+    "assets": {
+        "css": ["styles.css"],
+        "js": ["class.webterm.js"]
+    }
+}

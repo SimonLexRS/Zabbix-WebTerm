@@ -1,0 +1,4 @@
+*.backup.*
+__pycache__/
+*.pyc
+proxy/scripts/diag-output/

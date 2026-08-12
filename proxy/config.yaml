@@ -1,0 +1,50 @@
+# WebTerm WebSocket Proxy Configuration
+
+websocket:
+  # Host to bind to (0.0.0.0 for all interfaces)
+  host: 0.0.0.0
+  # Port to listen on
+  port: 8765
+
+http:
+  # Internal HTTP reverse proxy for Web mode. Publish through Nginx /webterm/web only.
+  host: 127.0.0.1
+  port: 8766
+
+web:
+  # Per-session subdomain origin for Web mode: https://<subid>.<public_base_domain>/
+  # Opt-in only: leave empty to use path-prefix mode (/webterm/web/<token>/).
+  # When set, requires a wildcard DNS record (*.<base>) and a matching TLS certificate.
+  public_base_domain: ""
+  public_scheme: https
+  # Path prefix used when public_base_domain is empty (default / recommended).
+  public_path: /webterm/web
+  # Network devices often use self-signed certificates.
+  verify_tls: false
+  # Slow devices (e.g. RB2011 loading heavy sections) can take >30s per
+  # jsproxy request; a short timeout turns slowness into fatal 504s and
+  # WebFig logout/reload loops.
+  timeout: 120
+  # Empty list allows any TCP port; set values like [80, 443, 8080, 8443] to restrict.
+  allowed_ports: []
+  # Tried only for initial GET/HEAD when the selected Web port refuses TCP.
+  fallback_ports: [80, 443, 4343, 8080, 8443]
+  # Keep controller redirects inside Zabbix even when devices redirect to another management IP.
+  follow_cross_host_redirects: true
+  max_body_size: 26214400
+
+session:
+  # Session timeout in seconds (1 hour)
+  timeout: 28800
+  # Maximum lines to buffer per session
+  max_buffer_lines: 10000
+  # Cleanup interval in seconds (5 minutes)
+  cleanup_interval: 300
+  # Maximum concurrent sessions
+  max_sessions: 100
+
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR
+  level: INFO
+  # Log file path (optional, also logs to stdout)
+  file: /var/log/webterm-proxy.log

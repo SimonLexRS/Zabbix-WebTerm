@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.log
+venv/
+.venv/
+config.yaml
+webterm-proxy.service
+README.md
+EOF

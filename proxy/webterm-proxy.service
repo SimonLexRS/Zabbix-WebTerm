@@ -1,0 +1,30 @@
+[Unit]
+Description=WebTerm WebSocket Proxy
+Documentation=https://github.com/SimonLexRS/Zabbix-WebTerm
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/usr/share/zabbix/ui/modules/webterm/proxy
+Environment="PYTHONUNBUFFERED=1"
+Environment="PYTHONDONTWRITEBYTECODE=1"
+
+# Start the proxy with config file
+ExecStart=/usr/local/bin/python3 /usr/share/zabbix/ui/modules/webterm/proxy/websocket_proxy.py -c /usr/share/zabbix/ui/modules/webterm/proxy/config.yaml
+
+# Restart policy
+Restart=always
+RestartSec=5
+
+# Resource limits
+LimitNOFILE=65535
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=webterm-proxy
+
+[Install]
+WantedBy=multi-user.target

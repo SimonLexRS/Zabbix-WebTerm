@@ -1,0 +1,20 @@
+# WebTerm WebSocket Proxy Dependencies
+# Python 3.8+ required
+
+# WebSocket server
+websockets>=11.0.0,<13.0.0
+
+# SSH client library
+paramiko>=3.0.0,<4.0.0
+
+# Telnet client library
+telnetlib3>=2.0.0
+
+# Configuration file parsing
+pyyaml>=6.0.0
+
+# Optional: Cryptography for better performance
+cryptography>=3.0.0
+
+# HTTP reverse proxy for web device sessions
+aiohttp>=3.9.0,<4.0.0

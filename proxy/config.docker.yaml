@@ -1,0 +1,34 @@
+# WebTerm WebSocket Proxy Configuration for Docker
+
+websocket:
+  host: 0.0.0.0
+  port: 8765
+
+http:
+  host: 0.0.0.0
+  port: 8766
+
+web:
+  # Opt-in subdomain base (empty = path-prefix /webterm/web/<token>/).
+  public_base_domain: ""
+  public_scheme: https
+  public_path: /webterm/web
+  verify_tls: false
+  # Slow devices (e.g. RB2011 loading heavy sections) can take >30s per
+  # jsproxy request; a short timeout turns slowness into fatal 504s and
+  # WebFig logout/reload loops.
+  timeout: 120
+  allowed_ports: []
+  fallback_ports: [80, 443, 4343, 8080, 8443]
+  follow_cross_host_redirects: true
+  max_body_size: 26214400
+
+session:
+  timeout: 28800
+  max_buffer_lines: 10000
+  cleanup_interval: 300
+  max_sessions: 100
+
+logging:
+  level: INFO
+  file: null
